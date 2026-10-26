@@ -1,23 +1,12 @@
+package fr.uge.reviewbot;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-public class Test {
-    public static void main(String[] args) {
-        // Données de test
-        List<Integer> list = new ArrayList<>(
-            Arrays.asList(5, 2, 8, 2, 10, 5)
-        );
+public class Test { // Violation : Le nom de la classe devrait commencer par une majuscule (PascalCase)
 
-        // Afficher les résultats
-        System.out.println("Liste : " + list);
-        System.out.println("Taille : " + list.size());
+    private int my_variable = 10; // Violation : Le nom du champ devrait être en camelCase (myVariable)
 
-        int max = list.stream()
-                      .max(Integer::compareTo)
-                      .orElseThrow();
-
-        System.out.println("Maximum : " + max);
+    public void DoSomething() { // Violation : Le nom de la méthode devrait commencer par une minuscule (doSomething)
+        System.out.println("Hello World");  
     }
 }

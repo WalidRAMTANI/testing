@@ -1,50 +1,12 @@
+package fr.uge.reviewbot;
 
-public class Calculatrice {
+import java.util.*;
 
-    public int addition(int a, int b) {
-        return a + b;
-    }
+public class Calculate { // Violation : Le nom de la classe devrait commencer par une majuscule (PascalCase)
 
-    public int soustraction(int a, int b) {
-        return a - b;
-    }
+    private int my_variable = 10; // Violation : Le nom du champ devrait être en camelCase (myVariable)
 
-    public int multiplication(int a, int b) {
-        return a * b;
-    }
-
-    public double division(int a, int b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Division par zéro");
-        }
-        return (double) a / b;
-    }
-
-    public int maximum(int[] nombres) {
-        if (nombres == null || nombres.length == 0) {
-            throw new IllegalArgumentException("Tableau vide");
-        }
-
-        int max = nombres[0];
-
-        for (int n : nombres) {
-            if (n > max) {
-                max = n;
-            }
-        }
-
-        return max;
-    }
-
-    public static void main(String[] args) {
-        Calculatrice calc = new Calculatrice();
-
-        System.out.println(calc.addition(5, 3));       // 8
-        System.out.println(calc.soustraction(10, 4)); // 6
-        System.out.println(calc.multiplication(3, 4));// 12
-        System.out.println(calc.division(10, 2));     // 5.0
-
-        int[] tab = {4, 9, 2, 15, 7};
-        System.out.println(calc.maximum(tab));        // 15
+    public void DoSomething() { // Violation : Le nom de la méthode devrait commencer par une minuscule (doSomething)
+        System.out.println("Hello World");  
     }
 }

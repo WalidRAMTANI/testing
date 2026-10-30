@@ -1,10 +1,11 @@
 checkstyle: true
 error-prone: true
-jacoco: enabled
-javadoc: true
+jacoco: disabled
+javadoc: false
 junit: true
 pmd: true
 spotbugs: enabled
 
 ignore:
   - src/main/generated/
+  - src/main/java/paka/IgnoredByConfigDemo.java

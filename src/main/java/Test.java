@@ -1,12 +1,44 @@
-package fr.uge.reviewbot;
+package fr.uge.reviewbot.sample;
 
-import java.util.*;
+import java.util.*; // [MINOR] AvoidStarImportCheck : Import en étoile
 
-public class Test { // Violation : Le nom de la classe devrait commencer par une majuscule (PascalCase)
+// [INFO] JavadocCheck : Absence de Javadoc sur la classe
+public class Test {
 
-    private int my_variable = 10; // Violation : Le nom du champ devrait être en camelCase (myVariable)
+    // [MAJOR] VisibilityModifierCheck : Champ public non encapsulé
+    public int publicVariable = 42;
 
-    public void DoSomething() { // Violation : Le nom de la méthode devrait commencer par une minuscule (doSomething)
-        System.out.println("Hello World");  
+    // [MINOR] MemberNameCheck : Mauvaise convention de nommage du champ
+    private int BadFieldName = 10;
+
+    // [MINOR] LineLengthCheck : Ligne excessivement longue (plus de 80 caractères)
+    // Ceci est un commentaire extrêmement long conçu exprès pour dépasser la limite de quatre-vingts caractères fixée par les règles de style standard.
+
+    // [BLOCKER] FinalizersCheck : Utilisation d'une méthode finalize() (risque critique)
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
+    // [BLOCKER] EmptySynchronizedBlockCheck : Bloc synchronisé vide (risque de concurrence/sécurité)
+    public void processBlock() {
+        synchronized (this) {
+            
+        }
+    }
+
+    // [MAJOR] CyclomaticComplexityCheck : Complexité cyclomatique élevée
+    public void complexMethod(int x, int y, int z) {
+        if (x > 0) {
+            if (y > 0) {
+                if (z > 0) {
+                    if (x + y > 10) {
+                        if (y + z > 10) {
+                            System.out.println("Too complex");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

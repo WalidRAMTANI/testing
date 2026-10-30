@@ -6,7 +6,7 @@ import java.io.FileInputStream;
  * This class is a test subject for various Java static analysis tools.
  * It intentionally contains multiple violations.
  */
-public class analyzerTestSubject { // Checkstyle: Class names should begin with an uppercase letter
+public class AnalyzerTestSubject { // Checkstyle: Class names should begin with an uppercase letter
 
     private int UnusedField = 10; // PMD: Unused private field. Checkstyle: Variable name should start with lowercase.
     

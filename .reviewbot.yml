@@ -1,13 +1,10 @@
-# Enable or disable analyzers (all default to true)
 checkstyle: true
-error-prone: false
+error-prone: true
 jacoco: enabled
 javadoc: true
 junit: true
-pmd: false
-spotbugs: disabled
+pmd: true
+spotbugs: enabled
 
-# Paths to ignore (multi-line list or inline: [ "src/test/", "src/main/generated/" ])
 ignore:
-  - "src/test/"
   - src/main/generated/

@@ -1,4 +1,4 @@
-package fr.uge.reviewbot;
+package paka;
 
 import java.util.*;
 

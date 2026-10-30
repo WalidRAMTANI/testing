@@ -1,8 +1,8 @@
-package fr.uge.reviewbot;
+package paka;
 
 import java.util.*;
 
-public class BadCode { // Violation : Le nom de la classe devrait commencer par une majuscule (PascalCase)
+public class Calculate { // Violation : Le nom de la classe devrait commencer par une majuscule (PascalCase)
 
     private int my_variable = 10; // Violation : Le nom du champ devrait être en camelCase (myVariable)
 

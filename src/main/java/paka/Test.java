@@ -1,4 +1,4 @@
-package fr.uge.reviewbot.sample;
+package paka;
 
 import java.util.*; // [MINOR] AvoidStarImportCheck : Import en étoile
 
